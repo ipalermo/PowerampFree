@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    
+    <!-- Songs list header -->
+
+	<LinearLayout
+	    android:id="@+id/itemHeader"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/matte_list_header" >
+	      
+	    <ImageView
+	        android:id="@+id/playinFromIcon"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/matte_albums"
+	        android:paddingLeft="10dp" />
+	    
+	    <TextView android:id="@+id/txtHeader"
+	        android:layout_width="0dp"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="1"
+	        android:gravity="center_vertical"
+	        android:textColor="#FFFFFF"
+	        android:padding="10dp" />
+	    
+	    <ImageView
+	        android:id="@+id/levelUp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:src="@drawable/matte_level_up" />
+		    
+    </LinearLayout>
+        
+    <ListView
+        android:id="@+id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+		android:layout_weight="1"
+		android:paddingLeft="10dp" >
+    </ListView>
+
+</LinearLayout>

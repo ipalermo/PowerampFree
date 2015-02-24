@@ -1,0 +1,73 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ncode.android.musicplayer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_title"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_title"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".MusicService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.ncode.android.musicplayer.action.TOGGLE_PLAYBACK" />
+                <action android:name="com.ncode.android.musicplayer.action.PLAY" />
+                <action android:name="com.ncode.android.musicplayer.action.PAUSE" />
+                <action android:name="com.ncode.android.musicplayer.action.SKIP" />
+                <action android:name="com.ncode.android.musicplayer.action.REWIND" />
+                <action android:name="com.ncode.android.musicplayer.action.STOP" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.ncode.android.musicplayer.action.URL" />
+
+                <data android:scheme="http" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".MusicIntentReceiver" >
+            <intent-filter>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".AlbumListActivity"
+            android:label="@string/albums_list_header" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.app.ListActivity" />
+        </activity>
+        
+        <activity
+            android:name=".ItemListActivity" 
+            android:label="@string/songs_list_header">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.app.ListActivity" />
+        </activity>
+        <activity android:name="PlayFromActivity"></activity>
+    </application>
+
+</manifest>

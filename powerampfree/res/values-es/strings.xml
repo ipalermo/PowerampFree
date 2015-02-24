@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_title">N Music Player</string>
+    <string name="menu_settings">Configuración</string>
+    <string name="activity_album_list">AlbumActivity</string>
+    <string name="songs_list_header">Temas</string>
+    <string name="albums_list_header">Álbumes</string>
+    <string name="artists_list_header">Artistas</string>
+    <string name="artist_albums__header">Álbumes del Artista</string>
+    <string name="no_available_music">No hay música disponible. Agregá música a tu dispositivo de almacenamiento externo (por ej. tu tarjeta SD) y volvé a intentar.</string>
+
+</resources>

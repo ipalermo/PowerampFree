@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="top" >
+	
+    <!-- Song Thumbnail Image -->
+
+    <ImageView
+        android:id="@+id/coverImage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        
+        android:src="@drawable/mdna_cover" />
+   
+	<LinearLayout
+	    android:id="@+id/controlsFooter"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+
+	    <!-- Player Buttons -->
+
+	    <LinearLayout
+	        android:id="@+id/linearLayout1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginLeft="0dp"
+	        android:layout_marginRight="0dp"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal" >
+
+	        <!-- Previous Button -->
+
+	        <ImageButton
+	            android:id="@+id/btnPrevious"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:background="@drawable/btn_previous_bg"
+	            android:src="@drawable/btn_previous" />
+
+	        <!-- Backward Button -->
+
+	        <ImageButton
+	            android:id="@+id/btnBackward"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:background="@drawable/btn_backward_bg"
+	            android:src="@drawable/btn_backward" />
+
+	        <!-- Play Button -->
+
+	        <ImageButton
+	            android:id="@+id/btnPlay"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:background="@drawable/btn_play_bg"
+	            android:src="@drawable/btn_play" />
+
+	        <!-- Pause Button -->
+
+	        <ImageButton
+	            android:id="@+id/btnPause"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:background="@drawable/btn_play_bg"
+	            android:src="@drawable/btn_pause"
+	            android:visibility="gone" />
+
+	        <!-- Forward Button -->
+
+	        <ImageButton
+	            android:id="@+id/btnForward"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:background="@drawable/btn_backward_bg"
+	            android:src="@drawable/btn_forward" />
+
+	        <!-- Next Button -->
+
+	        <ImageButton
+	            android:id="@+id/btnNext"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:background="@drawable/btn_previous_bg"
+	            android:src="@drawable/btn_next" />
+	    </LinearLayout>
+
+	    <LinearLayout
+	        android:id="@+id/player_titles_bg"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:clickable="true"
+	        android:paddingLeft="5dp"
+	        android:paddingRight="5dp" >
+
+	        <!-- Playlist button -->
+
+	        <ImageButton
+	            android:id="@+id/btnPlaylist"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="top"
+	            android:background="@null" />
+	        <!-- android:src="@drawable/matte_all_songs" -->
+
+	        <RelativeLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:ellipsize="marquee"
+	            android:focusable="true"
+	            android:focusableInTouchMode="true"
+	            android:scrollHorizontally="true" >
+
+	            <!-- Song Title -->
+
+	            <TextView
+	                android:id="@+id/songTitle"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:ellipsize="marquee"
+	                android:marqueeRepeatLimit="marquee_forever"
+	                android:singleLine="true"
+	                android:textStyle="bold" />
+
+	            <!-- Artist Name -->
+
+	            <TextView
+	                android:id="@+id/artistName"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/songTitle"
+	                android:ellipsize="marquee"
+	                android:marqueeRepeatLimit="marquee_forever"
+	                android:singleLine="true" />
+	        </RelativeLayout>
+	    </LinearLayout>
+
+	    <!-- Progress Bar/Seek bar -->
+
+	    <SeekBar
+	        android:id="@+id/songProgressBar"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:progressDrawable="@drawable/seekbar_progress"
+	        android:thumb="@android:color/transparent" />
+
+	    <!-- Timer Display -->
+
+	    <LinearLayout
+	        android:id="@+id/timerDisplay"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp" >
+
+	        <!-- Current Duration Label -->
+
+	        <TextView
+	            android:id="@+id/songCurrentDurationLabel"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="left" />
+
+	        <!-- Total Duration Label -->
+
+	        <TextView
+	            android:id="@+id/songTotalDurationLabel"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="right" />
+	    </LinearLayout>
+	</LinearLayout>
+	        
+</LinearLayout>

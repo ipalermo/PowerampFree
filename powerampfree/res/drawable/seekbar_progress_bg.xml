@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <clip>
+        <nine-patch xmlns:android="http://schemas.android.com/apk/res/android"
+            android:src="@drawable/matte_list_progress_value"
+            android:tileMode="repeat"
+            android:antialias="true"
+            android:dither="false"
+            android:filter="false"
+            android:gravity="left"
+        />
+        </clip>
+    </item>
+</layer-list>
